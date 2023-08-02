@@ -1,10 +1,17 @@
+package principal;
 import java.util.ArrayList;
+import calculos.CalculadoraDeTempo;
+import calculos.FiltroRecomendacao;
+import modelo.Episodio;
+import modelo.Filme;
+import modelo.Serie;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme("O Poderoso Chefão");
-        
-        meuFilme.setAnoDeLancamento(1970);
+    	
+    	Filme filme1 = new Filme("Toy Story", 2005, 110);
+    	
+        Filme meuFilme = new Filme("O Poderoso Chefão", 1970, 100);
         meuFilme.setDuracaoEmMinutos(180);
         System.out.println("Duração do filme: " + meuFilme.getDuracaoEmMinutos());
 
@@ -25,7 +32,7 @@ public class Principal {
         lost.setMinutosPorEpisodio(50);
         System.out.println("Duração para maratonar Lost: " + lost.getDuracaoEmMinutos());
 
-        Filme outroFilme = new Filme("Avatar" , 2023);
+        Filme outroFilme = new Filme("Avatar" , 2023, 100);
         outroFilme.setDuracaoEmMinutos(200);
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
